@@ -32,7 +32,7 @@ class App extends React.Component {
        <ProtectedRoute exact path='/cards/:id' component={Card}/>
 
        
-       <Route  path='/*' component={ErrorPage}/>
+       <ProtectedRoute  path='/*' component={ErrorPage}/>
   
        
        

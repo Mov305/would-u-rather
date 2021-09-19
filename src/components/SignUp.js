@@ -11,7 +11,9 @@ function SignUp(props) {
 
     const handleDirection=()=>{
         props.dispatch(handleSetUser(React.sel.value))
-        props.history.push('/')
+        const path = props.location.state ?props.location.state.id:'/'
+        props.history.push(path)
+       
         
     }
 

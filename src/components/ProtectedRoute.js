@@ -1,18 +1,25 @@
 import React from 'react'
 import {Route,Redirect} from 'react-router-dom'
 import {connect} from 'react-redux'
-const ProtectedRoute=({component:Component,user,...rest})=> {
+import { withRouter } from 'react-router'
+const ProtectedRoute=({component:Component,location,user,...rest})=> {
+    
     
 
     return (
-
+ 
             <Route exact {...rest} render={
                 props=>{
                     if (user){
                         
                         return <Component {...props}/>
                     }else{
-                        return <Redirect to='/sign'></Redirect>
+                        return <Redirect 
+                        to={{
+                            pathname: '/sign',
+                            state: { id: location.pathname }
+                        }}
+                        ></Redirect>
                     }
                 }
                 
@@ -20,6 +27,6 @@ const ProtectedRoute=({component:Component,user,...rest})=> {
     )
 }
 
-export default connect(({authedUser})=>({
+export default withRouter(connect(({authedUser})=>({
     user:authedUser
-}))(ProtectedRoute)
+}))(ProtectedRoute))

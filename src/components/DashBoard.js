@@ -6,10 +6,10 @@ import {connect} from 'react-redux'
 function DashBoard(props) {
     
     React.useEffect(() => {
-       const U=()=> setTimeout(()=>handleUnA(),100);
-
+       const U=()=> setTimeout(()=>handleUnA(),100)
+       
        U();
-      }, [])// eslint-disable-line react-hooks/exhaustive-deps
+      }, [props.qIds])// eslint-disable-line react-hooks/exhaustive-deps
 
     const {questions,authedUser}=props
     const [ids,setIds]=React.useState()
