@@ -36,7 +36,7 @@ export default function SideMenu() {
             <DrawerHeader>Would You Rather App</DrawerHeader>
   
             <DrawerBody>
-                <Flex direction='column'>
+                <Flex direction='column' onClick={onClose}>
                 <Navs/>
                 </Flex>
                 
