@@ -12,21 +12,21 @@ function NavBar(props) {
 
 
   return (
-    <Box width='100%' style={{background:'rgba(250,250,250,0.7)'}}>
+    <Box width='100%' style={{background:'rgba(250,250,250,0.7)'}}  >
       <Box p="3" display={['none', 'none', 'flex', 'flex']}>
         <Heading size="lg">Would You Rather App</Heading>
       </Box>
-      <Flex borderBottom='1px' borderColor="Menu" boxShadow="base" >
+      <Flex borderBottom='1px' borderColor="Menu" boxShadow="base" height={['80px','']} >
         <Flex align='flex-end' m='3' display={props.authedUser?['flex']:['none']} >
           <Avatar name={props.user?props.user.name:'undefined'} src={props.user?props.user.avatarURL:''} />
           <Box ml="3">
             <Text fontWeight="bold">
               {props.user?props.user.name:'undefined'}
-              <Badge ml="1" colorScheme="green">
+              <Badge ml="1" colorScheme="green" display={['none', 'none', 'inline-block']}>
                 New
               </Badge>
             </Text>
-            <Text fontSize="sm">UI Engineer</Text>
+            <Text fontSize="sm" >UI Engineer</Text>
           </Box>
 
 
@@ -40,7 +40,7 @@ function NavBar(props) {
         <Flex display={['none', 'none', 'none', 'flex']} m={4}>
           <Logs/>
         </Flex>
-        <Flex display={['flex', 'flex', 'flex', 'none']}>
+        <Flex display={['flex', 'flex', 'flex', 'none']} rounded='3xl' >
           <SideMenu />
         </Flex>
 
