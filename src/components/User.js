@@ -6,7 +6,7 @@ import {connect} from 'react-redux'
 function User(props) {
     return (
         <VStack
-            width='70%'
+            width='70%' fontSize={['sm','md']}
             divider={<StackDivider borderColor="gray.200" />}
             m={5}
             rounded='2xl'

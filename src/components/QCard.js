@@ -36,7 +36,7 @@ function QCard(props) {
         return (
             <Flex 
              onClick={()=>handleCard()}
-             align="flex-start"
+             align="flex-start" fontSize={['sm','md']}
              direction='column' width='70%' boxShadow="md"
              p="6" rounded="md" bg="white" border="1px"
               borderColor='whatsapp.200' m={7} bgColor='white'>

@@ -29,7 +29,7 @@ function NewQ(props) {
     }
 
     return (
-        <Box align='center'  >          
+        <Box align='center' fontSize={['sm','md']}  >          
             <Stack spacing={3} align='flex-start' width='70%' shadow='xl' p={5} m={5} rounded='xl' bgColor='white' >
             <Heading > Would you rather</Heading>
                 <Input focusBorderColor="lime" value={options.optionOne}  onChange={()=>handleInput()} ref={(option1)=>{React.option1=option1}} />

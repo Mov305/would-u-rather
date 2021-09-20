@@ -18,7 +18,7 @@ function SignUp(props) {
     }
 
     return (
-        <Box width='100%' align='center' p={5} my={5} >
+        <Box width='100%' align='center' p={5} my={5} fontSize={['sm','md']} >
             <Flex align='center' direction='column' width='70%' style={{ background: 'rgba(250,250,250,0.7)' }} shadow='xl'>
                 <Heading m={5}>Sign Up</Heading>
                 <Box fontSize='9xl' color='twitter.700' m={5}  ><SiReactos /></Box>
