@@ -38,7 +38,7 @@ function DashBoard(props) {
     return (
         <Flex pos='relative' width='100%' align='center' direction={['column','column','row','row']} fontSize={['sm','md']} >
         
-            <Flex m={4} alignSelf='flex-start'  borderLeft='1px' borderLeftColor='green.100' rounded='md' direction={['column','row','column']}   width={['100%','100%',"20%"]} style={{background:'rgba(250,250,250,0.7)'}}>
+            <Flex my={4} p={2} alignSelf='flex-start'  borderLeft='1px' borderLeftColor='green.100' rounded='md' direction={['column','column','column']}   width={['100%','96%',"30%"]} style={{background:'rgba(250,250,250,0.7)'}}>
                 <Heading size={['md','lg']}  p={6}  > CATEGORIES </Heading>
                 <Button onClick={()=>all()} isFullWidth={true} borderTop='1px' borderTopColor='green.100'  variant='ghost' size='md' colorScheme='teal'> TimeLine </Button>
                 <Button onClick={()=>handleAnswered()} isFullWidth={true} borderTop='1px' borderTopColor='green.100' variant='ghost' size='md' colorScheme='teal'>Answered Q</Button>

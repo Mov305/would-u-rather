@@ -56,7 +56,7 @@ function QCard(props) {
 
                 <Heading size="md" my={4}>Would You Rather</Heading>
                 <Box my={1} width="100%"  pos='relative'>
-                <Box pos='absolute' width={(v1/(v2+v1))*100+'%'} height='full' rounded='lg' display={(handleOption1() || handleOption2())?['flex']:['none'] }  bg='whatsapp.600'><Tag size="lg" bgColor='transparent'>{(v1/(v2+v1))*100+'%'}</Tag></Box>
+                <Box pos='absolute' width={(v1/(v2+v1))*100+'%'} height='full' rounded='lg' display={(handleOption1() || handleOption2())?['flex']:['none'] }  bg='whatsapp.600'><Tag size="lg" bgColor='transparent' display={['none','flex']}>{(v1/(v2+v1))*100+'%'}</Tag></Box>
                     <Button disabled={handleOption1() || handleOption2()}
                      size="md" isFullWidth={true} 
                      height={handleOption1()? 28 : 14}
@@ -68,7 +68,7 @@ function QCard(props) {
                     
                 </Box>
                 <Box my={1} width="100%" pos='relative'>
-                <Box pos='absolute' width={(v2/(v2+v1))*100+'%'} height='full' rounded='lg' display={(handleOption1() || handleOption2())?['flex']:['none'] }  bg='whatsapp.600'><Tag size="lg" bgColor='transparent'>{(v2/(v2+v1))*100+'%'}</Tag></Box>
+                <Box pos='absolute' width={(v2/(v2+v1))*100+'%'} height='full' rounded='lg' display={(handleOption1() || handleOption2())?['flex']:['none'] }  bg='whatsapp.600'><Tag size="lg" bgColor='transparent' display={['none','flex']}>{(v2/(v2+v1))*100+'%'}</Tag></Box>
 
                     <Button disabled={handleOption1() || handleOption2()}
                      size="md" isFullWidth={true} 
